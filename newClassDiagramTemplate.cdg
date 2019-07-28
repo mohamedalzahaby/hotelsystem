@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="newClassDiagramTemplate">
+  <ClassDiagramComponents>
+    <Class name="foodBoards" package="" visibility="public" xPosition="471.0" yPosition="538.0">
+      <Fields>
+        <Field name="type" type="int" visibility="private"/>
+        <Field name="nightsNum" type="int" visibility="private"/>
+        <Field name="boardcost" type="int" visibility="private"/>
+        <Field name="boardType" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setBooked" returnType="Object" visibility="public">
+          <Argument type="String" name="boardType"/>
+          <Argument type="Object" name="daysNum"/>
+        </Method>
+        <Method name="getBooked" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FoodBoardsFrame" package="" visibility="public" xPosition="928.0" yPosition="538.0">
+      <Fields>
+        <Field name="p" type="JPanel" visibility="private"/>
+        <Field name="frame" type="JFrame" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
+        <Field name="table" type="JTable" visibility="private"/>
+        <Field name="untitledField1" type="Object" visibility="private"/>
+        <Field name="columns" type="Object[]" visibility="private"/>
+        <Field name="model" type="DefaultTableModel" visibility="private"/>
+        <Field name="LabelId" type="JLabel" visibility="private"/>
+        <Field name="untitledField2" type="Object" visibility="private"/>
+        <Field name="LabelBoardType" type="JLabel" visibility="private"/>
+        <Field name="LabelNumdays" type="JLabel" visibility="private"/>
+        <Field name="LabeltextSearch" type="JLabel" visibility="private"/>
+        <Field name="CBoxFoodBoard" type="JComboBox" visibility="private"/>
+        <Field name="textId" type="JTextField" visibility="private"/>
+        <Field name="textNumdays" type="JTextField" visibility="private"/>
+        <Field name="textSearch" type="JTextField" visibility="private"/>
+        <Field name="btnAdd" type="JButton" visibility="private"/>
+        <Field name="btnDelete" type="JButton" visibility="private"/>
+        <Field name="btnUpdate" type="JButton" visibility="private"/>
+        <Field name="btnSave" type="JButton" visibility="private"/>
+        <Field name="btnSearch" type="JButton" visibility="private"/>
+        <Field name="btnNext" type="JButton" visibility="private"/>
+        <Field name="row" type="Object[]" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Serializable" package="" visibility="public" xPosition="1173.0" yPosition="50.0">
+      <Methods/>
+    </Interface>
+    <Class name="CostFunction" package="" visibility="public" xPosition="294.0" yPosition="81.0">
+      <Fields>
+        <Field name="cost" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="GymFrame" package="" visibility="public" xPosition="1220.0" yPosition="538.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="JFrame" package="" visibility="public" xPosition="1463.0" yPosition="50.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="menuFrame" package="" visibility="public" xPosition="1436.0" yPosition="538.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="MenuList" package="" visibility="public" xPosition="1648.0" yPosition="538.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AdditionalServices" package="" visibility="public" xPosition="706.0" yPosition="183.0">
+      <Fields>
+        <Field name="untitledField" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Gym" package="" visibility="public" xPosition="1220.0" yPosition="746.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Spa" package="" visibility="public" xPosition="1436.0" yPosition="746.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="FoodBoardsFrame" target="Serializable"/>
+    <IsRelation name="is" source="JFrame" target="GymFrame"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="GymFrame" target="Serializable"/>
+    <IsRelation name="is" source="AdditionalServices" target="Gym"/>
+    <HasRelation name="menu" source="menuFrame" target="MenuList" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="menuFrame" target="Serializable"/>
+    <IsRelation name="is" source="CostFunction" target="foodBoards"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="AdditionalServices" target="Serializable"/>
+    <HasRelation name="g" source="GymFrame" target="Gym" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="board" source="FoodBoardsFrame" target="foodBoards" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

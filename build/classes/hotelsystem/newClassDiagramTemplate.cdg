@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="newClassDiagramTemplate">
+  <ClassDiagramComponents>
+    <Class name="spa" package="" visibility="public" xPosition="170.0" yPosition="302.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="gym" package="" visibility="public" xPosition="381.0" yPosition="302.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="safari" package="" visibility="public" xPosition="596.0" yPosition="302.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="spaFrame" package="" visibility="public" xPosition="340.0" yPosition="514.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="menuList" package="" visibility="public" xPosition="614.0" yPosition="896.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="menuFrame" package="" visibility="public" xPosition="381.0" yPosition="741.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="foodBoards" package="" visibility="public" xPosition="1152.0" yPosition="896.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="foodBoardFrame" package="" visibility="public" xPosition="858.0" yPosition="730.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="CostFunction" package="" visibility="public" xPosition="858.0" yPosition="152.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AdditionalServices" package="" visibility="public" xPosition="366.0" yPosition="107.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="AdditionalServiceTotalCost" package="" visibility="public" xPosition="604.0" yPosition="30.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="SafariFrame" package="" visibility="public" xPosition="604.0" yPosition="514.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="gymFrame" package="" visibility="public" xPosition="89.0" yPosition="514.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="FoodBill" package="" visibility="public" xPosition="1209.0" yPosition="399.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="Serializable" package="" visibility="public" xPosition="858.0" yPosition="35.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="foodBoards" target="CostFunction"/>
+    <HasRelation name="sp2" source="spaFrame" target="SafariFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="spa" target="AdditionalServices"/>
+    <HasRelation name="g3" source="gymFrame" target="gym" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="AdditionalServices" target="CostFunction"/>
+    <IsRelation name="is" source="gym" target="AdditionalServices"/>
+    <IsRelation name="is" source="safari" target="AdditionalServices"/>
+    <HasRelation name="s3" source="SafariFrame" target="safari" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="f1" source="foodBoardFrame" target="menuFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="foodBoardFrame" target="Serializable"/>
+    <HasRelation name="m3" source="menuFrame" target="menuList" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="m2" source="menuFrame" target="foodBoardFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="f3" source="foodBoardFrame" target="foodBoards" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="FoodBill" target="CostFunction"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="menuFrame" target="Serializable"/>
+    <HasRelation name="m1" source="menuFrame" target="gymFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="CostFunction" target="Serializable"/>
+    <HasRelation name="g2" source="gymFrame" target="spaFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="sp3" source="spaFrame" target="spa" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="sf" source="SafariFrame" target="spaFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="AdditionalServiceTotalCost" target="CostFunction"/>
+    <HasRelation name="g2" source="gymFrame" target="menuFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="sp1" source="spaFrame" target="gymFrame" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
